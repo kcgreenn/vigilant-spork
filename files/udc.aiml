@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>*</pattern>
+        <template>Hello, I am a bot that can help you discover what field of computer science you might enjoy. Just type "ready" and we can get started.
+            <card>
+                <title>Are you ready to get started?</title>
+                <button>
+                    <text>Yes</text>
+                    <postback>ready</postback>
+                </button>
+                <button>
+                    <text>No</text>
+                    <postback>notready</postback>
+                </button>
+            </card>
+        </template>
+    </category>
+    <category>
+        <pattern>ready</pattern>
+        <template>
+            <card>
+                <title>Please select a topic that interests you.</title>
+                <subtitle>Or you can tell us in your own words</subtitle>
+                <button>
+                    <text>I enjoy the mathematics that underlie computer science.</text>
+                    <postback>math</postback>
+                </button>
+                <button>
+                    <text>I am fascinated by the physical components of the technology we use.</text>
+                    <postback>hardware</postback>
+                </button>
+                <button>
+                    <text>I am interested in the intersection of people and the technology they use.</text>
+                    <postback>people</postback>
+                </button>
+            </card>
+        </template>
+    </category>
+    <category>
+        <pattern>restart</pattern>
+        <template>
+            <card>
+                <title>Please select a topic that interests you.</title>
+                <subtitle>Or you can tell us in your own words</subtitle>
+                <button>
+                    <text>I enjoy the mathematics that underlie computer science.</text>
+                    <postback>math</postback>
+                </button>
+                <button>
+                    <text>I am fascinated by the physical components of the technology we use.</text>
+                    <postback>hardware</postback>
+                </button>
+                <button>
+                    <text>I am interested in the intersection of people and the technology they use.</text>
+                    <postback>people</postback>
+                </button>
+            </card>
+        </template>
+    </category>
+    
+    <!---->Math Responses
+    <category>
+        <pattern>^ math ^</pattern>
+        <template>
+            <card>
+                <title>Mathematics</title>
+                <subtitle>Which part of mathematics interests you, specifically?</subtitle>
+                <button>
+                    <text>I am interested in the probability and statistics that are used by many technologies these days</text>
+                    <postback>datascience</postback>
+                </button>
+                <button>
+                    <text>I like using algorithms to find efficient ways of solving technical problems.</text>
+                    <postback>coding</postback>
+                </button>                
+            </card>
+        </template>
+    </category>
+        <category>
+        <pattern>^ mathematics ^</pattern>
+        <template>
+            <card>
+                <title>Mathematics</title>
+                <subtitle>Which part of mathematics interests you, specifically?</subtitle>
+                <button>
+                    <text>I enjoy the probability and statistics that are used by many technologies these days</text>
+                    <postback>datascience</postback>
+                </button>
+                <button>
+                    <text>I like using algorithms to find efficient ways of solving technical problems.</text>
+                    <postback>coding</postback>
+                </button>                
+            </card>
+        </template>
+    </category>
+    
+        <!----> Data Science
+        <category>
+            <pattern>^ datascience ^</pattern>
+            <template>
+                If you enjoy statistics and finding insights from large data sets, you will enjoy a career in data science.
+                <link>
+                    <text>Learn More...</text>
+                    <url>https://www.computerscience.org/careers/data-science/</url>
+                </link>
+                Type "restart" if you wish to select different options.
+            </template>
+        </category>
+        <category>
+            <pattern>^ statistics ^</pattern>
+            <template>
+                If you enjoy statistics and finding insights from large data sets, you will enjoy a career in data science.
+                <link>
+                    <text>Learn More...</text>
+                    <url>https://www.computerscience.org/careers/data-science/</url>
+                </link>
+                Type "restart" if you wish to select different options.
+            </template>
+        </category>
+        
+        <!----> Coding
+        <category>
+            <pattern>coding</pattern>
+            <template>
+                If you enjoy designing efficient functions and algorithms, you will enjoy a career in software development.
+                <link>
+                    <text>Learn More...</text>
+                    <url>https://www.computerscience.org/careers/software-developer/</url>
+                </link>
+                Type "restart" if you wish to select different options.
+            </template>
+        </category>
+        <category>
+            <pattern>^ algorithms ^</pattern>   
+            <template>
+                If you enjoy designing efficient functions and algorithms, you will enjoy a career in software development.
+                <link>
+                    <text>Learn More...</text>
+                    <url>https://www.computerscience.org/careers/software-developer/</url>
+                </link>
+                Type "restart" if you wish to select different options.
+            </template>
+        </category>
+    
+    <!----> Hardware Responses
+    <category>
+        <pattern>^ hardware ^</pattern>
+        <template>
+            <card>
+                <title>Computer Hardware</title>
+                <subtitle>Which facet of hardware do you want to focus on?</subtitle>
+                <button>
+                    <text>I am interested in designing computer systems and the components that go into them.</text>
+                    <postback>computer engineer</postback>
+                </button>
+                <button>
+                    <text>I want to focus on the communications between different computer systems.</text>
+                    <postback>networking</postback>
+                </button>
+            </card>
+        </template>
+    </category>
+        <!----> Engineer Response
+        <category>
+            <pattern>^ computer engineer ^</pattern>
+            <template>
+                I think you would enjoy a career as a Computer Engineer
+                <link>
+                    <text>Learn More...</text>
+                    <url>https://www.computerscience.org/careers/computer-hardware-engineer/</url>
+                </link>
+            </template>
+        </category>
+        <!----> Networking Response
+        <category>
+            <pattern>^ networking ^</pattern>
+            <template>
+                You may enjoy a career as a Network Engineer/Administrator.
+                <link>
+                    <text>Learn More...</text>
+                    <url>https://www.computerscience.org/careers/network-administrator/</url>
+                </link>
+            </template>
+        </category>
+
+    <!----> People Responses
+    <category>
+        <pattern>^ people ^</pattern>
+        <template>
+            <card>
+                <title>People and Org's</title>
+                <subtitle>What part of the people aspect interests you?</subtitle>
+                <button>
+                    <text>I like to help organize groups of people to accomplish a shared goal.</text>
+                    <postback>management</postback>
+                </button>
+               <button>
+                    <text>I am interested in how people interact with computers and programs.</text>
+                    <postback>uidesign</postback>
+                </button>
+            </card>
+        </template>
+    </category>
+        <!----> UI Design Response
+        <category>
+            <pattern>^ uidesign ^</pattern>
+            <template>
+                You may enjoy a career in UI/UX Design, creating user friendly interfaces for products and applications.
+                <link>
+                    <text>Learn More...</text>
+                    <url>https://uxplanet.org/what-is-ui-vs-ux-design-and-the-difference-d9113f6612de</url>
+                </link>
+            </template>
+        </category>
+        <!----> Mgmt Response
+        <category>
+            <pattern>^ management ^</pattern>
+            <template>
+                IT Project Management could be the field for you if you like to organize and motivate your colleagues.
+                <link>
+                    <text>Learn More...</text>
+                    <url>https://www.itcareerfinder.com/it-careers/it-project-manager-career-path.html</url>
+                </link>
+            </template>
+        </category>
+
+    
+    <category>
+        <pattern>notready</pattern>
+        <template>No problem, just talk to me again when you are ready.</template>
+    </category>
+    
+    <category>
+        <pattern>program</pattern>
+        <template><program/></template>
+    </category>
+</aiml>
