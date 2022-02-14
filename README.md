@@ -1,1 +1,1 @@
-Contains the files for wguc951.
+Basic chatbot logic using AIML.
